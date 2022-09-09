@@ -4,8 +4,6 @@ const VisitCountryListCard = props => {
   const {countryDetails, visitButton} = props
   const {id, name, isVisited} = countryDetails
 
-  const buttonColor = isVisited ? 'visit-button' : 'active visit-button'
-
   const text = isVisited ? 'Visited' : 'Visit'
 
   const onClickVisitButton = () => {
@@ -20,7 +18,7 @@ const VisitCountryListCard = props => {
       ) : (
         <button
           type="button"
-          className={buttonColor}
+          className="visit-button"
           onClick={onClickVisitButton}
         >
           {text}
